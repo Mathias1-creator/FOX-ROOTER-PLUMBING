@@ -391,8 +391,16 @@ h3 { font-size: clamp(1.25rem, 2.4vw, 1.6rem); line-height: 1.25; font-weight: 6
 }
 .brand-badge {
   flex: none;
-  width: 44px;
-  height: 44px;
+  width: 64px;
+  height: 64px;
+  transition: width 0.25s ease, height 0.25s ease;
+}
+.site-header.is-condensed .brand-badge {
+  width: 52px;
+  height: 52px;
+}
+@media (max-width: 420px) {
+  .brand-badge { width: 52px; height: 52px; }
 }
 .brand-word {
   font-family: var(--font-display);
