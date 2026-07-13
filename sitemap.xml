@@ -1,27 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Update the base URL if the site is hosted somewhere other than prodigyplumbing.pro -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mathias1-creator.github.io/FOX-ROOTER-PLUMBING/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://prodigyplumbing.pro/</loc>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mathias1-creator.github.io/FOX-ROOTER-PLUMBING/services.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://prodigyplumbing.pro/services.html</loc>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mathias1-creator.github.io/FOX-ROOTER-PLUMBING/about.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://prodigyplumbing.pro/contact.html</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://prodigyplumbing.pro/about.html</loc>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mathias1-creator.github.io/FOX-ROOTER-PLUMBING/contact.html</loc>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://prodigyplumbing.pro/gallery.html</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

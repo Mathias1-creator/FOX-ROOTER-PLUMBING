@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mathias1-creator.github.io/FOX-ROOTER-PLUMBING/sitemap.xml
+# Update this URL if the site is hosted somewhere other than prodigyplumbing.pro
+Sitemap: https://prodigyplumbing.pro/sitemap.xml
