@@ -213,6 +213,8 @@ ul { margin: 0; padding: 0; }
 
 .site-footer .brand-badge { border: 1px solid rgba(255, 255, 255, 0.14); }
 .site-footer .brand-logo { height: 44px; }
+/* footer: license line sits under the badge, full width, never truncated */
+.site-footer .brand.has-logo { flex-direction: column; align-items: flex-start; gap: 0.55rem; }
 
 .brand-text { display: flex; flex-direction: column; line-height: 1; min-width: 0; }
 .brand-name {
