@@ -153,37 +153,4 @@
     });
   }
 
-  /* ----- Gallery lightbox (activates for cards with data-full) ----- */
-  var lightbox = document.getElementById("lightbox");
-  if (lightbox && typeof lightbox.showModal === "function") {
-    var lbImg = lightbox.querySelector("img");
-    var lbCap = lightbox.querySelector("figcaption");
-    var openCard = function (card) {
-      var full = card.getAttribute("data-full");
-      if (!full) return;
-      var caption = card.querySelector("figcaption");
-      var thumb = card.querySelector("img");
-      lbImg.src = full;
-      lbImg.alt = thumb ? thumb.alt : (caption ? caption.textContent.trim() : "Project photo");
-      lbCap.textContent = caption ? caption.textContent.trim() : "";
-      lightbox.showModal();
-    };
-    document.querySelectorAll(".gallery-card[data-full]").forEach(function (card) {
-      card.setAttribute("tabindex", "0");
-      card.setAttribute("role", "button");
-      card.addEventListener("click", function () { openCard(card); });
-      card.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          openCard(card);
-        }
-      });
-    });
-    lightbox.addEventListener("click", function (e) {
-      if (e.target === lightbox) lightbox.close();
-    });
-    var closeBtn = lightbox.querySelector(".lb-close");
-    if (closeBtn) closeBtn.addEventListener("click", function () { lightbox.close(); });
-    lightbox.addEventListener("close", function () { lbImg.src = ""; });
-  }
 })();
