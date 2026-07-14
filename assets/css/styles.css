@@ -169,12 +169,13 @@ ul { margin: 0; padding: 0; }
   position: sticky;
   top: 0;
   z-index: 50;
-  /* solid — backdrop-filter here would trap the fixed mobile nav drawer */
-  background: var(--white);
-  border-bottom: 1px solid var(--line);
+  /* dark, matching the footer — the wordmark badge sits directly on it.
+     (solid on purpose: backdrop-filter here would trap the fixed mobile nav drawer) */
+  background: #0a0f0f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: box-shadow 0.25s ease;
 }
-.site-header.is-scrolled { box-shadow: var(--shadow-sm); }
+.site-header.is-scrolled { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45); }
 
 .header-inner {
   display: flex;
@@ -188,7 +189,7 @@ ul { margin: 0; padding: 0; }
   align-items: center;
   gap: 0.65rem;
   text-decoration: none;
-  color: var(--ink);
+  color: var(--white);
   margin-right: auto;
   min-width: 0;
 }
@@ -198,11 +199,8 @@ ul { margin: 0; padding: 0; }
   display: none;
   align-items: center;
   flex: none;
-  background: #0a0f0f;
-  border-radius: 10px;
-  padding: 5px 10px;
 }
-.brand-logo { display: block; height: 38px; width: auto; }
+.brand-logo { display: block; height: 44px; width: auto; }
 .brand.has-logo .brand-badge { display: inline-flex; }
 .brand.has-logo .brand-mark,
 .brand.has-logo .brand-name { display: none; }
@@ -211,8 +209,7 @@ ul { margin: 0; padding: 0; }
 .site-header .brand.has-logo .brand-sub { display: none; }
 .brand-mark { width: 40px; height: 40px; flex: none; }
 
-.site-footer .brand-badge { border: 1px solid rgba(255, 255, 255, 0.14); }
-.site-footer .brand-logo { height: 44px; }
+.site-footer .brand-logo { height: 48px; }
 /* footer: license line sits under the badge, full width, never truncated */
 .site-footer .brand.has-logo { flex-direction: column; align-items: flex-start; gap: 0.55rem; }
 
@@ -227,14 +224,14 @@ ul { margin: 0; padding: 0; }
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.brand-name b { color: var(--teal-ink); font-weight: 700; }
+.brand-name b { color: #6fd0d2; font-weight: 700; }
 .brand-sub {
   margin-top: 0.28rem;
   font-size: 0.6rem;
   font-weight: 600;
   letter-spacing: 0.13em;
   text-transform: uppercase;
-  color: var(--grey);
+  color: rgba(255, 255, 255, 0.6);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -244,8 +241,7 @@ ul { margin: 0; padding: 0; }
 @media (max-width: 480px) {
   .header-inner { gap: 0.7rem; }
   .brand { gap: 0.5rem; }
-  .site-header .brand-logo { height: 30px; }
-  .site-header .brand-badge { padding: 4px 8px; border-radius: 8px; }
+  .site-header .brand-logo { height: 34px; }
   .brand-mark { width: 34px; height: 34px; }
   .brand-name { font-size: 1.02rem; }
   .brand-sub { font-size: 0.55rem; letter-spacing: 0.09em; }
@@ -261,12 +257,12 @@ ul { margin: 0; padding: 0; }
   gap: 0.5rem;
   font-weight: 700;
   font-size: 1.02rem;
-  color: var(--ink);
+  color: var(--white);
   text-decoration: none;
   white-space: nowrap;
 }
-.header-phone svg { width: 19px; height: 19px; color: var(--teal-ink); }
-.header-phone:hover { color: var(--teal-ink); }
+.header-phone svg { width: 19px; height: 19px; color: #6fd0d2; }
+.header-phone:hover { color: #6fd0d2; }
 
 .header-phone--mobile {
   display: inline-flex;
@@ -293,9 +289,9 @@ ul { margin: 0; padding: 0; }
   width: 46px;
   height: 46px;
   flex: none;
-  border: 2px solid var(--ink);
+  border: 2px solid rgba(255, 255, 255, 0.65);
   border-radius: 12px;
-  background: var(--white);
+  background: transparent;
   cursor: pointer;
   padding: 0;
 }
@@ -304,7 +300,7 @@ ul { margin: 0; padding: 0; }
   width: 20px;
   height: 2.5px;
   border-radius: 2px;
-  background: var(--ink);
+  background: var(--white);
   transition: transform 0.25s ease, opacity 0.2s ease;
 }
 .nav-toggle[aria-expanded="true"] .bar:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
@@ -318,7 +314,7 @@ ul { margin: 0; padding: 0; }
   right: 0;
   bottom: 0;
   z-index: 49;
-  background: var(--white);
+  background: #0c1313;
   padding: 0.75rem clamp(1.1rem, 4vw, 1.75rem) 2.5rem;
   overflow-y: auto;
   opacity: 0;
@@ -329,23 +325,26 @@ ul { margin: 0; padding: 0; }
 .site-nav.is-open { opacity: 1; visibility: visible; transform: none; }
 
 .site-nav ul { list-style: none; }
-.site-nav li { border-bottom: 1px solid var(--line); }
+.site-nav li { border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
 .site-nav a.nav-link {
   display: block;
   padding: 1rem 0.25rem;
   font-size: 1.12rem;
   font-weight: 600;
-  color: var(--ink);
+  color: rgba(255, 255, 255, 0.88);
   text-decoration: none;
 }
-.site-nav a.nav-link:hover { color: var(--teal-ink); }
-.site-nav a.nav-link[aria-current="page"] { color: var(--teal-ink); }
+.site-nav a.nav-link:hover { color: var(--white); }
+.site-nav a.nav-link[aria-current="page"] { color: #6fd0d2; }
 
 .nav-cta-group {
   display: grid;
   gap: 0.7rem;
   margin-top: 1.4rem;
 }
+/* the drawer is dark — ghost buttons switch to their white-outline form */
+.nav-cta-group .btn--ghost { border-color: rgba(255, 255, 255, 0.65); color: var(--white); }
+.nav-cta-group .btn--ghost:hover { background: var(--white); color: var(--ink); }
 
 body.nav-locked { overflow: hidden; }
 
@@ -369,7 +368,7 @@ body.nav-locked { overflow: hidden; }
     font-size: 0.98rem;
     border-bottom: 2px solid transparent;
   }
-  .site-nav a.nav-link:hover { border-bottom-color: var(--mint-deep); }
+  .site-nav a.nav-link:hover { border-bottom-color: rgba(111, 208, 210, 0.55); }
   .site-nav a.nav-link[aria-current="page"] { border-bottom-color: var(--teal); }
   .nav-cta-group { display: none; }
 
