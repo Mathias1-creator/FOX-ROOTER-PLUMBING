@@ -970,6 +970,14 @@ body.nav-locked { overflow: hidden; }
   border-radius: var(--r-lg);
   border: 1px solid var(--line);
   background: var(--mint);
+  overflow: hidden;
+}
+.svc-art--photo { display: block; }
+.svc-art--photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .svc-row:nth-of-type(even) .svc-art { background: var(--white); }
 .svc-art svg { width: min(58%, 220px); height: auto; }

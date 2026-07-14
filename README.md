@@ -9,7 +9,6 @@ step, no dependencies beyond Google Fonts. Deployable as-is to GitHub Pages or a
 index.html          Home
 about.html          About (Daniel's story + Why Choose Us)
 services.html       All 8 services (anchor-linked rows) + FAQ accordion
-gallery.html        Photo gallery (placeholder cards, lightbox-ready)
 contact.html        Contact — click-to-call/text/email (no form, by design)
 404.html            Not-found page (GitHub Pages picks it up automatically)
 robots.txt          + sitemap reference
@@ -19,20 +18,20 @@ assets/
   js/main.js        Nav, fade-ins, counters, scrollspy, FAQ, lightbox
   favicon.svg       Droplet mark in brand teal
   logo.png          Client wordmark badge (640px wide, transparent PNG)
+  photos/           Client-provided job photos, one per service (EXIF stripped)
 ```
 
-## Before launch — one swap left
+## Launch placeholders — all done
 
-(Done already: the logo — `assets/logo.png`, rendered on the dark header/footer with a
-droplet fallback if the file ever goes missing — and the testimonials, which are two
-real customer reviews on `index.html`, quoted word-for-word. Add more the same way:
-copy a review verbatim into a new `testi-card` figure.)
-
-1. **Gallery photos** — drop images into `assets/gallery/`, then per card in
-   `gallery.html`: add `data-full="assets/gallery/photo.jpg"` to the `<figure>` and an
-   `<img src="…" alt="Describe the job">` as the first child of `.gallery-media`
-   (remove the SVG + "coming soon" chip). The lightbox activates automatically for any
-   card with `data-full`. Full instructions are in a comment at the top of the grid.
+- **Logo** — `assets/logo.png`, rendered on the dark header/footer (droplet + text
+  fallback if the file ever goes missing).
+- **Testimonials** — two real customer reviews on `index.html`, quoted word-for-word.
+  Add more the same way: copy a review verbatim into a new `testi-card` figure.
+- **Job photos** — real, client-provided photos live at `assets/photos/*.jpg`, one per
+  service, shown in the services-page rows. To replace one, overwrite the file (same
+  name) — they're re-encoded to strip camera metadata, so do the same for new ones.
+- The separate gallery page was removed at the client's request; `gallery.html` can be
+  restored from git history if it's ever wanted again.
 
 ## Domain
 

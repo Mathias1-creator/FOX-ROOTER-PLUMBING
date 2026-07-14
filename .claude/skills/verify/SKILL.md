@@ -33,7 +33,7 @@ that streams files with correct `content-type` (html/css/js/svg) avoids process 
 
 ## What to drive (minimum)
 
-1. All 6 pages (5 + 404.html) load with 0 unexpected console errors and 0 `<form>` elements.
+1. All 5 pages (4 + 404.html; the gallery page was removed) load with 0 unexpected console errors and 0 `<form>` elements.
 2. Internal `href="page#id"` anchors all resolve (parse hrefs, grep `id="…"` in target file).
 3. Mobile 390px: sticky call/text bar visible with `tel:`/`sms:` hrefs; hamburger opens a
    full-height white drawer (a past bug: `backdrop-filter` on the header collapsed it), Escape closes.
@@ -41,8 +41,7 @@ that streams files with correct `content-type` (html/css/js/svg) avoids process 
    (`scroll-margin-top` on `.svc-row`); FAQ `<details>` opens and closes siblings.
 5. Horizontal overflow sweep: `scrollWidth - clientWidth` must be 0 on every page at
    320 / 360 / 375 / 390 / 768 px.
-6. Gallery lightbox: inject `data-full` + `<img>` per the README recipe, click card → `<dialog>` opens.
-7. No-JS context: nav links reachable, content visible (html.no-js fallbacks).
+6. No-JS context: nav links reachable, content visible (html.no-js fallbacks).
 
 ## Copy lint
 
