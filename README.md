@@ -21,18 +21,14 @@ assets/
   logo.png          Client wordmark badge (640px wide, transparent PNG)
 ```
 
-## Before launch — two swaps
+## Before launch — one swap left
 
-(The logo is done: the client's wordmark badge lives at `assets/logo.png` and renders
-on a fitted dark chip in the header and footer. If the file is ever replaced, keep the
-same filename — an SVG droplet + text lockup is the automatic fallback while it's missing.)
+(Done already: the logo — `assets/logo.png`, rendered on the dark header/footer with a
+droplet fallback if the file ever goes missing — and the testimonials, which are two
+real customer reviews on `index.html`, quoted word-for-word. Add more the same way:
+copy a review verbatim into a new `testi-card` figure.)
 
-1. **Testimonials** — the three review cards on `index.html` are clearly-marked
-   placeholders (search for `testi-card`). Paste real Yelp/Google reviews word-for-word,
-   update the attribution lines, and delete each card's `testi-tag` span. Do not invent
-   quotes.
-
-2. **Gallery photos** — drop images into `assets/gallery/`, then per card in
+1. **Gallery photos** — drop images into `assets/gallery/`, then per card in
    `gallery.html`: add `data-full="assets/gallery/photo.jpg"` to the `<figure>` and an
    `<img src="…" alt="Describe the job">` as the first child of `.gallery-media`
    (remove the SVG + "coming soon" chip). The lightbox activates automatically for any
