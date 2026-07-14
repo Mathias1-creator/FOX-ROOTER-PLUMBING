@@ -2,19 +2,19 @@
    Prodigy Plumbing — Perris, CA
    Flat CSS, no build step. Mobile-first.
 
-   Palette (sampled from brand; fine-tune against final logo file):
-     --teal        #0F8B8D   brand accent — icons, graphics, large display text
-     --teal-ink    #0C7173   buttons, links, small accent text (AA on white)
-     --teal-deep   #095557   hover states
+   Palette (teal family sampled directly from assets/logo.png pixels — H186° S~40%):
+     --teal        #3e8f98   brand accent — icons, graphics, large display text
+     --teal-ink    #2b676e   buttons, links, small accent text (6.4:1 on white)
+     --teal-deep   #1e4d52   hover states (9.4:1 on white)
      --ink         #0D0D0D   headings, dark bands
      --mint        #EAF6F6   alternating section backgrounds
      --grey        #4A4A4A   body text
    ========================================================================== */
 
 :root {
-  --teal: #0F8B8D;
-  --teal-ink: #0C7173;
-  --teal-deep: #095557;
+  --teal: #3e8f98;
+  --teal-ink: #2b676e;
+  --teal-deep: #1e4d52;
   --ink: #0D0D0D;
   --ink-2: #171d1d;
   --white: #ffffff;
@@ -224,7 +224,7 @@ ul { margin: 0; padding: 0; }
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.brand-name b { color: #6fd0d2; font-weight: 700; }
+.brand-name b { color: #6fc8d2; font-weight: 700; }
 .brand-sub {
   margin-top: 0.28rem;
   font-size: 0.6rem;
@@ -261,8 +261,8 @@ ul { margin: 0; padding: 0; }
   text-decoration: none;
   white-space: nowrap;
 }
-.header-phone svg { width: 19px; height: 19px; color: #6fd0d2; }
-.header-phone:hover { color: #6fd0d2; }
+.header-phone svg { width: 19px; height: 19px; color: #6fc8d2; }
+.header-phone:hover { color: #6fc8d2; }
 
 .header-phone--mobile {
   display: inline-flex;
@@ -335,7 +335,7 @@ ul { margin: 0; padding: 0; }
   text-decoration: none;
 }
 .site-nav a.nav-link:hover { color: var(--white); }
-.site-nav a.nav-link[aria-current="page"] { color: #6fd0d2; }
+.site-nav a.nav-link[aria-current="page"] { color: #6fc8d2; }
 
 .nav-cta-group {
   display: grid;
@@ -415,7 +415,7 @@ body.nav-locked { overflow: hidden; }
   color: var(--teal-ink);
   margin-bottom: 0.85rem;
 }
-.section--dark .eyebrow { color: #6fd0d2; }
+.section--dark .eyebrow { color: #6fc8d2; }
 
 /* ---------- Hero (homepage) ---------- */
 
@@ -663,7 +663,7 @@ body.nav-locked { overflow: hidden; }
   background: radial-gradient(rgba(255, 255, 255, 0.09) 1.5px, transparent 1.6px) 0 0 / 24px 24px;
   pointer-events: none;
 }
-.specialty-card--teal { background: linear-gradient(135deg, var(--teal-ink) 0%, #073e40 100%); }
+.specialty-card--teal { background: linear-gradient(135deg, var(--teal-ink) 0%, #073a40 100%); }
 .specialty-card--ink { background: linear-gradient(135deg, #222a2a 0%, var(--ink) 100%); }
 .specialty-card > * { position: relative; }
 .specialty-card .badge-specialty {
@@ -816,7 +816,7 @@ body.nav-locked { overflow: hidden; }
   font-size: 0.87rem;
   color: rgba(255, 255, 255, 0.65);
 }
-.cta-license svg { width: 16px; height: 16px; flex: none; color: #6fd0d2; }
+.cta-license svg { width: 16px; height: 16px; flex: none; color: #6fc8d2; }
 
 /* ---------- Footer ---------- */
 
@@ -865,7 +865,7 @@ body.nav-locked { overflow: hidden; }
 .footer-col li { padding: 0; }
 
 .footer-contact p { margin: 0 0 0.7rem; font-size: 0.94rem; display: flex; gap: 0.55rem; align-items: flex-start; }
-.footer-contact svg { width: 17px; height: 17px; flex: none; margin-top: 0.22rem; color: #6fd0d2; }
+.footer-contact svg { width: 17px; height: 17px; flex: none; margin-top: 0.22rem; color: #6fc8d2; }
 .footer-contact a { color: var(--white); font-weight: 600; }
 
 .footer-bottom {
