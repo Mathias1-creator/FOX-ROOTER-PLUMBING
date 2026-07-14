@@ -192,10 +192,27 @@ ul { margin: 0; padding: 0; }
   margin-right: auto;
   min-width: 0;
 }
-.brand-logo { height: 46px; width: auto; }
-.brand-logo.is-missing { display: none; }
-.brand-mark { display: none; width: 40px; height: 40px; flex: none; }
-.brand-logo.is-missing + .brand-mark { display: block; }
+/* Wordmark badge sits on a dark chip (the logo is drawn for dark grounds).
+   Hidden until the image actually loads; the droplet + text lockup is the fallback. */
+.brand-badge {
+  display: none;
+  align-items: center;
+  flex: none;
+  background: #0a0f0f;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.brand-logo { display: block; height: 38px; width: auto; }
+.brand.has-logo .brand-badge { display: inline-flex; }
+.brand.has-logo .brand-mark,
+.brand.has-logo .brand-name { display: none; }
+/* with the wordmark badge in place, the header brand is the badge alone;
+   the license line stays visible in the footer, hero badges, and CTA bands */
+.site-header .brand.has-logo .brand-sub { display: none; }
+.brand-mark { width: 40px; height: 40px; flex: none; }
+
+.site-footer .brand-badge { border: 1px solid rgba(255, 255, 255, 0.14); }
+.site-footer .brand-logo { height: 44px; }
 
 .brand-text { display: flex; flex-direction: column; line-height: 1; min-width: 0; }
 .brand-name {
@@ -225,7 +242,8 @@ ul { margin: 0; padding: 0; }
 @media (max-width: 480px) {
   .header-inner { gap: 0.7rem; }
   .brand { gap: 0.5rem; }
-  .brand-logo { height: 40px; }
+  .site-header .brand-logo { height: 30px; }
+  .site-header .brand-badge { padding: 4px 8px; border-radius: 8px; }
   .brand-mark { width: 34px; height: 34px; }
   .brand-name { font-size: 1.02rem; }
   .brand-sub { font-size: 0.55rem; letter-spacing: 0.09em; }

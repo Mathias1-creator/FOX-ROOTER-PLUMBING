@@ -23,9 +23,11 @@ assets/
 
 ## Before launch — three swaps
 
-1. **Logo** — add the client's mascot logo as `assets/logo.png`. Every page already
-   references it; until the file exists, a built-in SVG droplet mark shows instead
-   (handled by an `onerror` fallback on the `<img>`), so nothing looks broken meanwhile.
+1. **Logo** — add the client's wordmark badge as `assets/logo.png` (easiest: on GitHub,
+   open the `assets` folder → Add file → Upload files → drop the image, named exactly
+   `logo.png`, → Commit). The header (top-left) and footer already have a fitted dark
+   chip for it — it appears automatically once the file loads. Until then a built-in
+   SVG droplet + text lockup shows instead, so nothing looks broken meanwhile.
 
 2. **Testimonials** — the three review cards on `index.html` are clearly-marked
    placeholders (search for `testi-card`). Paste real Yelp/Google reviews word-for-word,
