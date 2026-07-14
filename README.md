@@ -18,23 +18,21 @@ assets/
   css/styles.css    Entire design system (palette variables at the top)
   js/main.js        Nav, fade-ins, counters, scrollspy, FAQ, lightbox
   favicon.svg       Droplet mark in brand teal
-  logo.png          ← NOT included: drop the real logo file here
+  logo.png          Client wordmark badge (640px wide, transparent PNG)
 ```
 
-## Before launch — three swaps
+## Before launch — two swaps
 
-1. **Logo** — add the client's wordmark badge as `assets/logo.png` (easiest: on GitHub,
-   open the `assets` folder → Add file → Upload files → drop the image, named exactly
-   `logo.png`, → Commit). The header (top-left) and footer already have a fitted dark
-   chip for it — it appears automatically once the file loads. Until then a built-in
-   SVG droplet + text lockup shows instead, so nothing looks broken meanwhile.
+(The logo is done: the client's wordmark badge lives at `assets/logo.png` and renders
+on a fitted dark chip in the header and footer. If the file is ever replaced, keep the
+same filename — an SVG droplet + text lockup is the automatic fallback while it's missing.)
 
-2. **Testimonials** — the three review cards on `index.html` are clearly-marked
+1. **Testimonials** — the three review cards on `index.html` are clearly-marked
    placeholders (search for `testi-card`). Paste real Yelp/Google reviews word-for-word,
    update the attribution lines, and delete each card's `testi-tag` span. Do not invent
    quotes.
 
-3. **Gallery photos** — drop images into `assets/gallery/`, then per card in
+2. **Gallery photos** — drop images into `assets/gallery/`, then per card in
    `gallery.html`: add `data-full="assets/gallery/photo.jpg"` to the `<figure>` and an
    `<img src="…" alt="Describe the job">` as the first child of `.gallery-media`
    (remove the SVG + "coming soon" chip). The lightbox activates automatically for any
