@@ -29,7 +29,7 @@
       justify-content: space-between;
       gap: 16px;
       font-family: 'Inter', -apple-system, sans-serif;
-      border-top: 3px solid #0F8B8D;
+      border-top: 3px solid #3e8f98;
       box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
     }
     #pp-cookie-banner p {
@@ -40,7 +40,7 @@
       color: #EAF6F6;
     }
     #pp-cookie-banner a {
-      color: #4FD1D9;
+      color: #6fc8d2;
       text-decoration: underline;
     }
     #pp-cookie-actions {
@@ -60,7 +60,7 @@
     }
     #pp-cookie-actions button:hover { opacity: 0.85; }
     #pp-accept-all {
-      background: #0F8B8D;
+      background: #3e8f98;
       color: #FFFFFF;
     }
     #pp-necessary-only {
@@ -90,8 +90,19 @@
   `;
   document.body.appendChild(banner);
 
+  // Sit above the sticky mobile call/text bar instead of covering it.
+  // The bar is display:none on desktop, so its measured height is 0 there
+  // and the banner stays flush with the bottom of the viewport.
+  const ctaBar = document.querySelector(".mobile-cta-bar");
+  function placeAboveCtaBar() {
+    banner.style.bottom = ctaBar ? ctaBar.getBoundingClientRect().height + "px" : "0px";
+  }
+  placeAboveCtaBar();
+  window.addEventListener("resize", placeAboveCtaBar);
+
   function setConsent(value) {
     localStorage.setItem(STORAGE_KEY, value);
+    window.removeEventListener("resize", placeAboveCtaBar);
     banner.remove();
     // If "all" was accepted and you later add analytics, load it here, e.g.:
     // if (value === "all") { loadAnalyticsScript(); }
