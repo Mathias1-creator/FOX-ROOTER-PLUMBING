@@ -829,6 +829,17 @@ body.nav-locked { overflow: hidden; }
 .footer-brand .brand-sub { color: rgba(255, 255, 255, 0.55); }
 .footer-brand p { font-size: 0.93rem; max-width: 30rem; }
 
+.finance-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--teal-ink);
+  font-size: 0.97rem;
+}
+.finance-note svg { width: 19px; height: 19px; flex: none; }
+
 /* ---------- Slogan ---------- */
 .slogan {
   font-family: var(--font-head);
@@ -839,6 +850,26 @@ body.nav-locked { overflow: hidden; }
   color: var(--teal-ink);
 }
 .footer-brand .slogan { color: #6fc8d2; margin: -0.35rem 0 1.1rem; font-size: 1.02rem; max-width: none; }
+
+.footer-brand .bca-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: var(--white);
+  border-radius: 10px;
+  padding: 0.55rem 0.9rem;
+  margin-top: 1.2rem;
+}
+.footer-brand .bca-badge img { display: block; height: 42px; width: auto; }
+.footer-brand .bca-badge span {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  border-left: 1px solid var(--line);
+  padding-left: 0.85rem;
+}
 .notfound .slogan { margin-top: 2.4rem; opacity: 0.9; }
 
 .social { display: flex; gap: 0.6rem; margin-top: 1.3rem; }
