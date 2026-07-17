@@ -827,6 +827,18 @@ body.nav-locked { overflow: hidden; }
 .footer-brand .brand-sub { color: rgba(255, 255, 255, 0.55); }
 .footer-brand p { font-size: 0.93rem; max-width: 30rem; }
 
+/* ---------- Slogan ---------- */
+.slogan {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.02rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--teal-ink);
+}
+.footer-brand .slogan { color: #6fc8d2; margin: -0.35rem 0 1.1rem; font-size: 1.02rem; max-width: none; }
+.notfound .slogan { margin-top: 2.4rem; opacity: 0.9; }
+
 .social { display: flex; gap: 0.6rem; margin-top: 1.3rem; }
 .social a {
   display: grid;
