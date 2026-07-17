@@ -861,15 +861,6 @@ body.nav-locked { overflow: hidden; }
   margin-top: 1.2rem;
 }
 .footer-brand .bca-badge img { display: block; height: 42px; width: auto; }
-.footer-brand .bca-badge span {
-  font-family: var(--font-head);
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: 0.04em;
-  color: var(--ink);
-  border-left: 1px solid var(--line);
-  padding-left: 0.85rem;
-}
 .notfound .slogan { margin-top: 2.4rem; opacity: 0.9; }
 
 .social { display: flex; gap: 0.6rem; margin-top: 1.3rem; }
