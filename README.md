@@ -10,10 +10,11 @@ index.html          Home (hero, featured services, reviews, service area)
 about.html          About (Daniel's story + Why Choose Us)
 services.html       All 8 services (anchor-linked rows) + FAQ accordion
 contact.html        Contact — click-to-call/text/email (no form, by design)
+privacy.html        Privacy policy (linked from the footer, not the main nav)
 404.html            Not-found page (GitHub Pages picks it up automatically)
 cookie-consent.js   Cookie banner (localStorage only, no tracking installed)
 robots.txt          + sitemap reference
-sitemap.xml         All 4 pages
+sitemap.xml         All 5 pages
 assets/
   css/styles.css    Entire design system (palette variables at the top)
   js/main.js        Nav, fade-ins, counters, scrollspy, FAQ accordion

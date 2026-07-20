@@ -909,6 +909,19 @@ body.nav-locked { overflow: hidden; }
 }
 .footer-bottom p { margin: 0 0 0.35rem; }
 .footer-bottom p:last-child { margin: 0; }
+.footer-bottom a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.footer-bottom a:hover, .footer-bottom a:focus { color: var(--white); }
+
+/* ---------- Legal / policy pages ---------- */
+
+.legal { max-width: 46rem; }
+.legal .effective-date { color: var(--teal-ink); font-weight: 600; font-size: 0.95rem; margin-bottom: 1.4rem; }
+.legal h2 { font-size: 1.3rem; margin: 2.2rem 0 0.75rem; }
+.legal p, .legal ul { color: var(--grey); margin: 0 0 1rem; }
+.legal ul { padding-left: 1.3rem; }
+.legal li { margin-bottom: 0.5rem; }
+.legal b { color: var(--ink); }
+.legal a { color: var(--teal-ink); }
 
 @media (min-width: 700px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
 @media (min-width: 1020px) {
