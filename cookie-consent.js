@@ -80,8 +80,8 @@
   banner.id = "pp-cookie-banner";
   banner.innerHTML = `
     <p>
-      We use cookies to keep this site running smoothly and to understand how visitors use it.
-      We do not sell your personal information.
+      We keep cookies to a minimum — right now this site only remembers the choice you make below.
+      If we ever add analytics, it will run only if you allow it. We do not sell your personal information.
     </p>
     <div id="pp-cookie-actions">
       <button id="pp-necessary-only" type="button">Necessary Only</button>
