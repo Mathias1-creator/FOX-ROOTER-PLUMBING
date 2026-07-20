@@ -153,4 +153,30 @@
     });
   }
 
+  /* ----- Consent-gated Google Maps embed (contact page) -----
+     The Google iframe is the only third-party content that can set
+     cookies, so it loads only if the visitor chose "Accept All" on
+     the cookie banner, or taps "Load map" themselves. */
+  var mapWrap = document.getElementById("map-embed");
+  if (mapWrap) {
+    var loadMap = function () {
+      if (mapWrap.querySelector("iframe")) return;
+      var f = document.createElement("iframe");
+      f.src = mapWrap.getAttribute("data-map-src");
+      f.title = "Map of the Prodigy Plumbing service area around Perris, California";
+      f.loading = "lazy";
+      f.referrerPolicy = "no-referrer-when-downgrade";
+      f.setAttribute("allowfullscreen", "");
+      mapWrap.innerHTML = "";
+      mapWrap.appendChild(f);
+    };
+    window.ppLoadMap = loadMap;
+    if (localStorage.getItem("prodigyPlumbingCookieConsent") === "all") {
+      loadMap();
+    } else {
+      var mapBtn = document.getElementById("load-map");
+      if (mapBtn) mapBtn.addEventListener("click", loadMap);
+    }
+  }
+
 })();

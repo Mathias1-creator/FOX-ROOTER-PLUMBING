@@ -222,13 +222,11 @@
         <span class="eyebrow">Where we work</span>
         <h2>Perris &amp; the surrounding valley</h2>
       </div>
-      <div class="map-wrap reveal">
-        <iframe
-          src="https://www.google.com/maps?q=Perris,+California&z=10&output=embed"
-          title="Map of the Prodigy Plumbing service area around Perris, California"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen></iframe>
+      <div class="map-wrap reveal" id="map-embed" data-map-src="https://www.google.com/maps?q=Perris,+California&amp;z=10&amp;output=embed">
+        <div class="map-consent">
+          <p>The map is loaded from Google and may set Google cookies. It loads automatically if you chose "Accept All" on the cookie banner.</p>
+          <button class="btn btn--teal" type="button" id="load-map">Load map</button>
+        </div>
       </div>
       <p class="map-note">Service-area view — we come to you, everywhere on this map.</p>
     </div>

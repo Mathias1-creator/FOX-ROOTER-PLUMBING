@@ -80,8 +80,9 @@
   banner.id = "pp-cookie-banner";
   banner.innerHTML = `
     <p>
-      We keep cookies to a minimum — right now this site only remembers the choice you make below.
-      If we ever add analytics, it will run only if you allow it. We do not sell your personal information.
+      We keep cookies to a minimum. Your choice below controls whether Google content — like the map
+      on our contact page — loads automatically. If we ever add analytics, it will also run only if
+      you allow it. We do not sell your personal information.
     </p>
     <div id="pp-cookie-actions">
       <button id="pp-necessary-only" type="button">Necessary Only</button>
@@ -104,7 +105,10 @@
     localStorage.setItem(STORAGE_KEY, value);
     window.removeEventListener("resize", placeAboveCtaBar);
     banner.remove();
-    // If "all" was accepted and you later add analytics, load it here, e.g.:
+    // "Accept All" loads the consent-gated Google Maps embed right away
+    // if we're on the contact page (see main.js).
+    if (value === "all" && typeof window.ppLoadMap === "function") window.ppLoadMap();
+    // If you later add analytics, load it here the same way, e.g.:
     // if (value === "all") { loadAnalyticsScript(); }
   }
 
