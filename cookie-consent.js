@@ -80,8 +80,8 @@
   banner.id = "pp-cookie-banner";
   banner.innerHTML = `
     <p>
-      We keep cookies to a minimum. Your choice below controls whether Google content — like the map
-      on our contact page — loads automatically. If we ever add analytics, it will also run only if
+      We keep cookies to a minimum. Your choice below controls whether the Google map on our
+      contact page loads automatically. If we ever add analytics, it will also run only if
       you allow it. We do not sell your personal information.
     </p>
     <div id="pp-cookie-actions">
